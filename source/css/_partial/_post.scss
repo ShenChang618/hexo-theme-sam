@@ -16,9 +16,6 @@
   @extend .display-inlineBlock;
   margin-right: 1em;
 }
-.post-header .post-meta {
-  @extend .float-right;
-}
 .archive-title,
 .post-header .post-title,
 .post-tags-title {
@@ -39,12 +36,14 @@
 .post-title,
 .post-title-link,
 .post-tags-title {
-  @extend .display-inlineBlock;
   @extend .font-weight-normal;
   @extend .text-decoration-none;
   @extend .letter-spacing_1px;
   @extend .color-333;
   transition: all ease .2s;
+}
+.post-title-link {
+  @extend .display-inlineBlock;
 }
 .post-tags-title,
 .post-title,
@@ -52,9 +51,6 @@
   @extend .overflow-hidden;
   @extend .white-space-nowrap;
   @extend .text-overflow-ellipsis;
-}
-.post .post-tags-title {
-  @extend .display-block;
 }
 .post-title-link:hover {
   text-indent: .2em;

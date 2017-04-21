@@ -19,8 +19,20 @@ img {
   box-shadow: 1px 1px 1px #ccc;
 }
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   @extend .font-weight-normal;
+}
+h4 {
+  @extend .font-size_20px;
+}
+h5 {
+  @extend .font-size_18px;
+}
+h6 {
+  @extend .font-size_16px;
 }
 code {
   @extend .display-inlineBlock;
@@ -37,6 +49,11 @@ li {
 }
 li p {
   @extend .text-indent-none;
+}
+.video,
+video {
+  @extend .display-block;
+  @extend .margin-auto;
 }
 .headerlink::before {
   content: "\e62f";

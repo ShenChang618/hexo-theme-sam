@@ -16,7 +16,7 @@ aside_menu:
     link: /about/index.html
     icon: guanyu
   rss:
-    link: /rss/index.html
+    link: /atom.xml
     icon: rss
 
 # 侧边展示，信息标签只能自己修改了，位置 layout/_partial/_aside.ejs
@@ -35,3 +35,7 @@ links:
     avatar: /img/qq.png
     link: http://www.baidu.com
     description: 能够一边直播一边踩能够一边直播一边踩
+
+# 畅言
+changyan_appid: cysXoaLrO
+changyan_appkey: d728bfac2289e4139bef3956efe4401f

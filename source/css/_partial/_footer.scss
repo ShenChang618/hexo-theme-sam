@@ -1,5 +1,7 @@
 .footer {
   clear: both;
+  margin-bottom: 1em;
+  @extend .overflow-hidden;
   @extend .font-size_14px;
   @extend .text-align-center;
 }

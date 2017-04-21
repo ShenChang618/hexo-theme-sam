@@ -36,9 +36,9 @@
     <% } %>
   </header>
   <div class="post-content"><%- page.content %></div>
-
     <% if ( url_for( page.path ) !== "/about/index.html" ) { %>
       <%- partial( "./_partial/_copyright.ejs" ) %>
+      <%- partial( "./_partial/_comments.ejs" ) %>
       <div class="toc-wrapper">
         <%- toc( page.content, { list_number: false } ) %>
       </div>
