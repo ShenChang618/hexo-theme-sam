@@ -1,0 +1,17 @@
+html,
+body {
+  min-width: 1200px;
+  max-width: 1440px;
+  min-height: 500px;
+  @extend .height_100pct;
+  @extend .margin-auto;
+  @extend .overflow-hidden;
+}
+
+body {
+  @extend .clearfix;
+  // font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Heiti SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-family: "Open Sans", STXihei, "Microsoft Yahei Light", STSong,YouYuan, "Microsoft Yahei", arial, sans-serif;
+  @extend .font-size_14px;
+  @extend .color-333;
+}

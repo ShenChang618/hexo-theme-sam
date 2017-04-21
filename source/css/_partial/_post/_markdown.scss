@@ -1,0 +1,54 @@
+/* ========= markdown 语法 ========= */
+p {
+  @extend .text-indent-abbr;
+  line-height: 1.6;
+}
+a {
+  @extend .color-19f;
+  @extend .text-decoration-none;
+}
+a:hover {
+  @extend .color-333;
+  @extend .text-decoration-underline;
+}
+img {
+  @extend .display-block;
+  max-width: 90%;
+  @extend .margin-auto;
+  margin-top: 1em;
+  box-shadow: 1px 1px 1px #ccc;
+}
+h2,
+h3 {
+  @extend .font-weight-normal;
+}
+code {
+  @extend .display-inlineBlock;
+  padding: 0 .3em;
+  margin: 0 .3em;
+  @extend .text-indent-none;
+  line-height: 1.4;
+  @extend .color-fff;
+  @extend .background-color-19f;
+  @extend .border-radius_3px;
+}
+li {
+  line-height: 1.5;
+}
+li p {
+  @extend .text-indent-none;
+}
+.headerlink::before {
+  content: "\e62f";
+  vertical-align: -.05em;
+  margin-right: .2em;
+  font-family: "iconfont";
+}
+
+.highlight {
+  max-height: 600px;
+  margin-left: 2em;
+  overflow: auto;
+
+  @import "./_highlight";
+}

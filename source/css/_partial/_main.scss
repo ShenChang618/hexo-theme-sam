@@ -1,0 +1,13 @@
+/* ========= 主体部分 ========= */
+.main {
+  @extend .float-left;
+  width: 70%;
+  @extend .height_100pct;
+  @extend .overflow-auto;
+
+  @import "./_main/_paginator";
+  @import "./_main/_to-top";
+}
+.main > .min-height {
+  min-height: 85%;
+}

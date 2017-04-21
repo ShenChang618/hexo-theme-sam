@@ -1,0 +1,9 @@
+<section class="archive min-height">
+  <h1 class="archive-title"><%= temp %></h1>
+  <% page.posts.each( function ( post ) { %>
+  <p class="archive-post">
+    <span class="archive-time"><%= date( post.date, "MM-DD" ) %></span>
+    <a class="archive-link" href="<%- url_for( post.path ) %>" title="<%= post.title %>"><%= post.title %></a>
+  </p>
+  <% } ) %>
+</section>

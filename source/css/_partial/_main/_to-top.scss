@@ -1,0 +1,22 @@
+/* ========= 上到最顶 ========= */
+.toTop {
+  @extend .position-fixed;
+  right: 25px;
+  bottom: 25px;
+  display: none;
+  width: 40px;
+  height: 40px;
+  @extend .text-align-center;
+  @extend .text-decoration-none;
+  line-height: 38px;
+  background-color: rgba(0,0,0,.6);
+
+  .toTop-icon {
+    font-size: 30px;
+    @extend .color-fff;
+  }
+
+  &:hover {
+    opacity: .9;
+  }
+}

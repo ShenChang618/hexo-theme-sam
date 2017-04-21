@@ -1,0 +1,52 @@
+/* ========= 友情链接 ========= */
+.links-list {
+  @extend .clearfix;
+  @extend .padding_0;
+  @extend .overflow-hidden;
+  @extend .font-size_18px;
+  @extend .text-align-center;
+  @extend .list-style-none;
+}
+.links-item {
+  @extend .display-inlineBlock;
+  @extend .clearfix;
+  width: 350px;
+  margin: 1em .5em;
+}
+.links-avatar {
+  @extend .float-left;
+  width: 80px;
+  height: 80px;
+  @extend .border-radius-round;
+  box-shadow: 1px 1px 1px 1px $color-19f;
+}
+.links-wrapper {
+  @extend .float-left;
+  height: 60px;
+  margin: 10px 0 10px 24px;
+}
+.links-link:hover {
+  @extend .color-333;
+  border-bottom: 1px solid $color-333;
+}
+.links-text {
+  @extend .margin_0;
+  font-size: .8em;
+}
+.links-link,
+.links-text {
+  width: 246px;
+  height: 30px;
+  @extend .overflow-hidden;
+  @extend .text-overflow-ellipsis;
+  @extend .text-align-left;
+  @extend .white-space-nowrap;
+  line-height: 30px;
+}
+.links-link {
+  @extend .display-block;
+  height: 29px;
+  @extend .text-decoration-none;
+  @extend .color-19f;
+  border-bottom: 1px solid $color-19f;
+}

@@ -1,0 +1,37 @@
+# 侧边导航
+aside_menu:
+  home:
+    link: /index.html
+    icon: wendang
+  archives:
+    link: /archives/index.html
+    icon: wendang1
+  tags:
+    link: /tags/index.html
+    icon: biaoqian1
+  links:
+    link: /links/index.html
+    icon: lianjie
+  about:
+    link: /about/index.html
+    icon: guanyu
+  rss:
+    link: /rss/index.html
+    icon: rss
+
+# 侧边展示，信息标签只能自己修改了，位置 layout/_partial/_aside.ejs
+aside_show:
+  avatar: /img/avatar.png
+  name: 晨风明悟
+  caption: 个人博客
+  description: 观诸次为道，存神于想思。
+
+# 页脚请自己在主题的 layout/_partial/_footer.ejs 里修改
+# 文章的代码块样式请在 source/css/_partial/_post/_highlight.scss 中修改
+
+# 友情链接
+links:
+  baidu:
+    avatar: /img/qq.png
+    link: http://www.baidu.com
+    description: 能够一边直播一边踩能够一边直播一边踩

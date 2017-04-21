@@ -1,0 +1,47 @@
+<article class="post min-height">
+  <% if ( url_for( page.path ) === "/tags/index.html" ) { %>
+    <h1 class="post-tags-title"><%- __( "title.categories" ) %></h1>
+    <%- list_categories() %>
+    <h1 class="post-tags-title"><%- __( "title.tags" ) %></h1>
+    <div class="tag-cloud">
+      <%- tagcloud( { min_font: 16, max_font: 28, amount: 100, orderby: "count" } ) %>
+    </div>
+  <% } else if ( url_for( page.path ) === "/links/index.html" ) {  %>
+  <h1 class="post-tags-title"><%- __( "title.links" ) %></h1>
+  <ul class="links-list">
+    <% for ( link in theme.links ) {  %>
+    <li class="links-item">
+      <img class="links-avatar" src="<%= theme.links[ link ].avatar %>" alt="<%= link %>">
+      <div class="links-wrapper">
+        <a class="links-link" href="<%= theme.links[ link ].link %>" title="<%= link %>" target="_blank"><%= link %></a>
+        <p class="links-text"><%= theme.links[ link ].description %></p>
+      </div>
+    </li>
+    <% } %>
+  </ul>
+  <% } else { %>
+  <header class="post-header">
+    <h1 class="post-title"><%= page.title %></h1>
+
+    <% if ( url_for( page.path ) !== "/about/index.html" ) { %>
+    <p class="post-meta">
+      <span class="post-time"><%- date(page.date, 'YYYY-MM-DD') %></span>
+      <% page.categories.data.forEach( function ( categorie ) { %>
+      <a href="<%- url_for( categorie.path ) %>" title="<%= categorie.name %>" class="post-categories"><%= categorie.name %></a>
+      <% } ) %>
+      <% page.tags.data.forEach( function ( tag ) { %>
+      <a href="<%- url_for( tag.path ) %>"" title="<%= tag.name %>" class="post-tags"><i class="post-tags-icon iconfont icon-biaoqian"></i><%= tag.name %></a>
+      <% } ) %>
+    </p>
+    <% } %>
+  </header>
+  <div class="post-content"><%- page.content %></div>
+
+    <% if ( url_for( page.path ) !== "/about/index.html" ) { %>
+      <%- partial( "./_partial/_copyright.ejs" ) %>
+      <div class="toc-wrapper">
+        <%- toc( page.content, { list_number: false } ) %>
+      </div>
+    <% } %>
+  <% } %>
+</article>

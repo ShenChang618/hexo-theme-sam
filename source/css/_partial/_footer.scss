@@ -1,0 +1,16 @@
+.footer {
+  clear: both;
+  @extend .font-size_14px;
+  @extend .text-align-center;
+}
+.footer-text {
+  margin: .5em;
+}
+.footer-link {
+  @extend .color-19f;
+  @extend .text-decoration-none;
+}
+.footer-link:hover {
+  @extend .color-333;
+  @extend .text-decoration-underline;
+}

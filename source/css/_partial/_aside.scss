@@ -1,0 +1,20 @@
+/* ========= 侧边栏 ========= */
+.aside {
+  @extend .position-relative;
+  @extend .z-index_1;
+  @extend .float-left;
+  width: 30%;
+  @extend .height_100pct;
+  @extend .overflow-hidden;
+  @extend .font-size_16px;
+  background: url("/img/aside-show.jpg") no-repeat right center / cover;
+
+  @import "./_aside/_menu";
+  @import "./_aside/_show";
+  @import "./_aside/_search";
+  @import "./_aside/_search-data";
+
+  .aside-menu:hover + .aside-show {
+    background-color: rgba(0,0,0,0);
+  }
+}

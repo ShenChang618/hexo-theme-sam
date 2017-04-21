@@ -1,0 +1,46 @@
+<aside class="aside">
+  <nav class="aside-menu">
+    <ul class="aside-list">
+      <% for ( item in theme.aside_menu ) { %>
+        <% if ( url_for( page.path ) === url_for( theme.aside_menu[ item ].link ) ) { %>
+        <li class="aside-item aside-menu-current"><i class="aside-menu-icon iconfont icon-<%= theme.aside_menu[ item ].icon %>"></i><a href="<%- url_for( theme.aside_menu[ item ].link ) %>" class="aside-menu-link" title="<%- __( "aside_menu." + item ) %>"><%- __( "aside_menu." + item ) %></a></li>
+        <% } else { %>
+        <li class="aside-item"><i class="aside-menu-icon iconfont icon-<%= theme.aside_menu[ item ].icon %>"></i><a href="<%- url_for( theme.aside_menu[ item ].link ) %>" class="aside-menu-link" title="<%- __( "aside_menu." + item ) %>"><%- __( "aside_menu." + item ) %></a></li>
+        <% } %>
+      <% } %>
+    </ul>
+  </nav>
+
+  <article class="aside-show">
+    <%- partial( "./_search.ejs" ) %>
+    <%- partial( "./_search-data.ejs" ) %>
+    <div class="aside-show-wrapper">
+      <figure class="aside-avatar">
+        <img src="<%= theme.aside_show.avatar %>" alt="avatar" class="aside-avatar-img">
+        <figcaption class="aside-avatar-caption">
+          <%= theme.aside_show.name %>
+          <% if ( theme.aside_show.caption ) { %>
+          <strong class="aside-avatar-STRONG"><%= theme.aside_show.caption %></strong>
+          <% } %>
+        </figcaption>
+      </figure>
+      <p class="aside-show-description"><%= theme.aside_show.description %></p>
+      <ul class="aside-show-info">
+        <li class="aside-show-item">
+          <a href="javascript: void(0);" class="aside-show-link" title="微信" target="_blank"><i class="aside-show-icon iconfont icon-iconfontweixin"></i></a>
+          <div class="aside-show-outside aside-show-outside_1">
+            <img class="aside-show-IMG aside-show-IMG_1" src="/img/weixin.png" alt="微信">
+          </div>
+        </li>
+        <li class="aside-show-item"><a href="https://www.zhihu.com/people/chenfengmingwu/activities" class="aside-show-link" title="知乎" target="_blank"><i class="aside-show-icon iconfont icon-zhihu"></i></a></li>
+        <li class="aside-show-item"><a href="https://github.com/Sam618" class="aside-show-link" title="github" target="_blank"><i class="aside-show-icon iconfont icon-github"></i></a></li>
+        <li class="aside-show-item">
+          <a href="javascript: void(0);" class="aside-show-link" title="QQ" target="_blank"><i class="aside-show-icon iconfont icon-qq"></i></a>
+          <div class="aside-show-outside">
+            <img class="aside-show-IMG" src="/img/qq.png" alt="QQ">
+          </div>
+        </li>
+      </ul>
+    </div>
+  </article>
+</aside>

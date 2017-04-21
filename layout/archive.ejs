@@ -1,0 +1,68 @@
+<article class="archive min-height">
+  <% if ( __( "title.posts_in_total" ) === "zh" ) { %>
+  <h1 class="archive-title">本站目前共计<em class="archive-title-counter"><%= site.posts.length %></em>篇文章</h1>
+  <% } else { %>
+  <h1 class="archive-title"><em class="archive-title-counter"><%= site.posts.length %></em>Posts In Total</h1>
+  <% } %>
+
+  <%
+    /**
+     * 为什么写怎么多代码？
+     * 本来我以为很简单，但是没想到 site.posts 这个变量出来的文章顺序是不对的，那我就只能重新排序了
+     **/
+    var list = {},
+        sortArr = [],
+        i, j, temp;
+        
+    // 借用了 jQuery 的数组内容判断函数
+    function inArray( elem, arr, i ) {
+      return arr == null ? -1 : Array.prototype.indexOf.call( arr, elem, i );
+    }
+
+    site.posts.each( function ( post ) {
+      // 每个日期对应一个数组，数组保存数据
+      list[ post.date.year() ] = [];
+
+      // 这部分代码就是我要重排序的原因，判断年份是否已在数组中
+      if ( inArray( post.date.year(), sortArr ) === -1 ) {
+        sortArr.push( post.date.year() );
+
+        // 都是升序
+        sortArr = sortArr.sort( function ( a, b ) {
+          return b - a;
+        } );
+      }
+    } );
+
+    site.posts.each( function ( post ) {
+      list[ post.date.year() ].push( {
+        // new Date 之后可以格式化时间，这样数组的 sort 方法就能正常排序
+        date: new Date( post.date ),
+        title: post.title,
+        path: url_for( post.path ),
+      } );
+
+      // 按照月份排序
+      list[ post.date.year() ] = list[ post.date.year() ].sort( function ( a, b ) {
+        return b.date - a.date;
+      } );
+    } );
+  %>
+
+  <% for ( i = 0; i < sortArr.length; i++ ) { %>
+  <section class="archive-date">
+    <h2 class="archive-date-title"><%= sortArr[ i ] %></h2>
+
+    <%
+      temp = list[ sortArr[ i ] ];
+
+      for ( j = 0; j < temp.length; j++ ) {
+    %>
+    <p class="archive-post">
+      <span class="archive-time"><%= date( temp[ j ].date, "MM-DD" ) %></span>
+      <a class="archive-link" href="<%= temp[ j ].path %>" title="<%= temp[ j ].title %>"><%= temp[ j ].title %></a>
+    </p>
+    <% } %>
+  </section>
+  <% } %>
+</article>

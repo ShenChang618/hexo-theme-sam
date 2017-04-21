@@ -1,0 +1,21 @@
+# 侧边栏菜单
+aside_menu:
+  home: 首页
+  archives: 所有文章
+  tags: 分类标签
+  links: 友情链接
+  about: 关于
+  rss: RSS
+
+# 分页
+paginator:
+  prev: 上一页
+  next: 下一页
+
+# 页面标题
+title:
+  tags: 所有标签
+  categories: 所有分类
+  links: 友情链接
+  # posts in total, "en" or "zh"
+  posts_in_total: zh

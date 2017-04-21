@@ -1,0 +1,68 @@
+/* ========= 侧边栏左侧菜单 ========= */
+.aside-menu {
+  @extend .position-absolute;
+  @extend .top_0;
+  @extend .left_0;
+  width: 2.8em;
+  @extend .height_100pct;
+  background-color: rgba(0,0,0,.6);
+  transition: all ease-in .4s;
+}
+.aside-list {
+  @extend .padding_0;
+  @extend .margin_0;
+  margin-top: 1em;
+  @extend .overflow-hidden;
+  @extend .white-space-nowrap;
+  @extend .list-style-none;
+}
+.aside-item {
+  padding: .8em;
+  @extend .cursor-pointer;
+}
+.aside-menu-icon {
+  font-size: 1.2em;
+  color: #fff;
+}
+.aside-menu-link {
+  @extend .display-inlineBlock;
+  @extend .width_0;
+  @extend .height_0;
+  @extend .font-size_12px;
+  text-indent: 1em;
+  @extend .text-decoration-none;
+  @extend .white-space-nowrap;
+  @extend .color-fff;
+  @extend .opacity_0;
+  transition: all ease .5s;
+}
+
+.aside-item:hover,
+.aside-menu-current {
+  @extend .background-color-fff;
+  transition: all ease .5s;
+}
+.aside-item:hover .aside-menu-icon,
+.aside-item:hover .aside-menu-link,
+.aside-menu-current .aside-menu-icon,
+.aside-menu-current .aside-menu-link {
+  color: #333;
+}
+.aside-item:hover .aside-menu-link,
+.aside-menu-current .aside-menu-link {
+  @extend .font-size_14px;
+  @extend .text-decoration-underline;
+}
+
+.aside-menu:hover {
+  @extend .width_100pct;
+}
+.aside-item:hover,
+.aside-menu:hover .aside-menu-current {
+  border-left: 4px solid $color-ccc;
+}
+.aside-menu:hover .aside-menu-link {
+  width: 20em;
+  height: 1em;
+  @extend .opacity_1;
+}

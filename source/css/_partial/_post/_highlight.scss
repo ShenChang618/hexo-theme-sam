@@ -1,0 +1,74 @@
+/* ========= 代码块 ========= */
+table {
+  width: 100%;
+  @extend .background-color-19f;
+  border-collapse: collapse;
+  @extend .border-radius_3px;
+}
+tbody {
+  background-color: #f8f5ec;
+}
+td {
+  @extend .padding_0;
+}
+pre {
+  @extend .margin_0;
+  padding: .3em 0;
+}
+.line {
+  font-size: .8em;
+  line-height: 1.4;
+}
+.line::after {
+  content: "";
+  @extend .display-inlineBlock;
+}
+.gutter {
+  width: 1.5em;
+  text-align: center;
+  color: #999;
+  border-right: 2px solid $color-fff;
+}
+.code {
+  text-indent: 1em;
+}
+
+.attr,
+.selector-tag {
+  color: #f4a460;
+}
+.keyword {
+  color: #19f;
+}
+.name {
+  color: #ff4500;
+}
+.string {
+  color: #32cd32;
+}
+
+table::before {
+  display: block;
+  padding: .3em;
+  @extend .color-fff;
+  @extend .background-color-19f;
+  border-radius: 3px 3px 0 0;
+}
+&.plain table::before {
+  content: "CODE";
+}
+&.bash table::before {
+  content: "BASH";
+}
+&.html table::before {
+  content: "HTML";
+}
+&.scss table::before {
+  content: "SCSS";
+}
+&.javascript table::before {
+  content: "JavaScript";
+}
+&.python table::before {
+  content: "PYTHON";
+}

@@ -1,0 +1,27 @@
+/* ========= 分页系统 ========= */
+.paging {
+  @extend .float-right;
+  margin: 2em;
+  @extend .font-size_16px;
+}
+.page-number,
+.extend,
+.space {
+  padding: .5em .7em;
+  margin-left: 1px;
+  @extend .background-color-eee;
+  @extend .color-333;
+}
+.space {
+  padding: .5em;
+}
+.extend:hover,
+.page-number:hover {
+  @extend .text-decoration-none;
+  @extend .color-fff;
+  @extend .background-color-19f;
+}
+.page-number.current:hover {
+  @extend .color-333;
+  @extend .background-color-eee;
+}

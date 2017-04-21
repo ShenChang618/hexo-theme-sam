@@ -1,0 +1,21 @@
+# aside menu
+aside_menu:
+  home: Home
+  archives: Archives
+  tags: Tags
+  links: Links
+  about: About
+  rss: RSS
+
+# paginator
+paginator:
+  prev: prev
+  next: next
+
+# page title
+title:
+  tags: All tags
+  categories: All categories
+  links: Blogroll
+  # posts in total, "en" or "zh"
+  posts_in_total: en

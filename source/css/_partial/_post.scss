@@ -1,0 +1,199 @@
+/* ========= 文章展示 ========= */
+.posts {
+  @extend .font-size_18px;
+  @extend .overflow-hidden;
+}
+.post {
+  padding: .5em 2em;
+  @extend .font-size_18px;
+  @extend .overflow-hidden;
+}
+.post-header {
+  @extend .clearfix;
+  @extend .overflow-hidden;
+}
+.post-header .post-time {
+  @extend .display-inlineBlock;
+  margin-right: 1em;
+}
+.post-header .post-meta {
+  @extend .float-right;
+}
+.archive-title,
+.post-header .post-title,
+.post-tags-title {
+  text-indent: .2em;
+  border-left: 4px solid $color-333;
+}
+.archive-title,
+.post-title,
+.post-tags-title {
+  font-size: 1.9em;
+  line-height: 1.6;
+  margin: 0;
+}
+.posts .post-title {
+  border-left: 0 none;
+}
+.archive-title,
+.post-title,
+.post-title-link,
+.post-tags-title {
+  @extend .display-inlineBlock;
+  @extend .font-weight-normal;
+  @extend .text-decoration-none;
+  @extend .letter-spacing_1px;
+  @extend .color-333;
+  transition: all ease .2s;
+}
+.post-tags-title,
+.post-title,
+.archive-title {
+  @extend .overflow-hidden;
+  @extend .white-space-nowrap;
+  @extend .text-overflow-ellipsis;
+}
+.post .post-tags-title {
+  @extend .display-block;
+}
+.post-title-link:hover {
+  text-indent: .2em;
+  @extend .color-19f;
+  border-left: 4px solid $color-19f;
+}
+.post-excerpt {
+  margin: -.5em 0;
+  @extend .overflow-hidden;
+}
+.post-more {
+  @extend .display-inlineBlock;
+  @extend .text-indent-abbr;
+  @extend .text-decoration-none;
+  @extend .color-19f;
+  transition: all ease .2s;
+}
+.post-more:hover {
+  @extend .text-decoration-underline;
+  text-indent: 2.5em;
+  @extend .color-333;
+  border-left: 2px solid $color-333;
+}
+.post-meta {
+  line-height: 1.8;
+}
+.post-time {
+  @extend .display-block;
+  margin-top: .5em;
+}
+.post-categories {
+  @extend .display-inlineBlock;
+  padding: 0 .5em;
+  margin-right: .6em;
+  @extend .text-decoration-none;
+  @extend .color-fff;
+  @extend .background-color-19f;
+  transition: all ease .2s;
+}
+.post-categories:hover {
+  opacity: .8;
+}
+.post-tags {
+  margin-right: .5em;
+  @extend .text-decoration-none;
+  @extend .color-333;
+}
+.post-tags:hover,
+.post-tags:hover .post-tags-icon::after {
+  @extend .color-19f;
+}
+.post-tags-icon {
+  font-size: 1.1em;
+}
+.post-tags-icon::before {
+  vertical-align: -.1em;
+}
+.post-tags-icon::after {
+  content: "·";
+  margin: 0 .3em;
+  @extend .color-333;
+}
+.post-copyright {
+  padding: 1em;
+  margin-top: 2em;
+  font-size: .9em;
+  @extend .text-indent-abbr;
+  @extend .color-000;
+  @extend .background-color-eee;
+  @extend .border-radius_3px;
+}
+.post-copyright-link {
+  @extend .color-19f;
+  @extend .text-decoration-none;
+}
+.post-copyright-link:hover {
+  @extend .color-333;
+  @extend .text-decoration-underline;
+}
+.toc-wrapper {
+  @extend .position-fixed;
+  @extend .top_0;
+  @extend .left_0;
+  @extend .display-table;
+  table-layout: fixed;
+  width: 30%;
+  height: 100%;
+  @extend .margin_0;
+  background-color: rgba(0,0,0,.6);
+  transition: all ease .5s;
+}
+.toc-wrapper:hover {
+  left: 30%;
+}
+.toc-wrapper::after {
+  content: "\e61a";
+  @extend .position-absolute;
+  @extend .top_50pct;
+  right: -30px;
+  width: 30px;
+  height: 40px;
+  margin-top: -20px;
+  font-family: "iconfont";
+  @extend .text-align-center;
+  line-height: 38px;
+  @extend .color-fff;
+  background-color: rgba(0,0,0,.6);
+  border: 0 none;
+  @extend .cursor-pointer;
+}
+.toc {
+  @extend .display-tableCell;
+  @extend .vertical-align-middle;
+  width: 100%;
+  padding: 0 1em;
+  @extend .overflow-auto;
+  @extend .list-style-none;
+}
+.toc-child {
+  padding-left: 1em;
+  @extend .list-style-none;
+}
+.toc-link {
+  @extend .display-inlineBlock;
+  margin: .1em 0;
+  text-indent: .4em;
+  @extend .text-decoration-none;
+  @extend .color-fff;
+  border-left: 2px solid $color-fff;
+  transition: all ease .2s;
+}
+.toc-link:hover {
+  text-indent: 1em;
+  @extend .text-decoration-underline;
+}
+
+.post-excerpt,
+.post-content {
+  @extend .overflow-hidden;
+
+  @import "./_post/_markdown";
+}

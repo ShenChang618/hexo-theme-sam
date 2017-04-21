@@ -1,0 +1,26 @@
+/* ========= 归档 ========= */
+.archive {
+  padding: .5em 2em;
+  @extend .overflow-hidden;
+  @extend .font-size_16px;
+}
+.archive-title-counter {
+  margin: 0 .5em 0 .1em;
+  font-size: .9em;
+  @extend .color-19f;
+}
+.archive-post {
+  @extend .text-indent-abbr;
+  transition: all ease .1s;
+}
+.archive-post:hover {
+  border-left: 2px solid #333;
+}
+.archive-link {
+  @extend .text-decoration-none;
+  @extend .color-19f;
+}
+.archive-link:hover {
+  @extend .text-decoration-underline;
+  @extend .color-333;
+}
