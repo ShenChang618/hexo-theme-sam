@@ -44,6 +44,10 @@ code {
   @extend .background-color-19f;
   @extend .border-radius_3px;
 }
+ul,
+ol {
+  padding-left: 2em;
+}
 li {
   line-height: 1.5;
 }
