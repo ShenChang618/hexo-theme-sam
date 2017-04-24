@@ -1,0 +1,47 @@
+.aside {
+  font-size: 13px;
+
+  .aside-menu {
+    width: 100%;
+  }
+  .aside-show-wrapper {
+    font-size: 12px;
+  }
+
+  .aside-avatar-STRONG {
+    display: none;
+  }
+
+  // .aside-menu-current {
+  //   border: 0 none;
+  //
+  //   .aside-menu-link {
+  //     width: 0;
+  //     height: 0;
+  //     opacity: 0;
+  //   }
+  // }
+  .aside-show::before {
+    display: none;
+  }
+  .search-from {
+    top: 2.8em;
+    right: 50%;
+    width: 70%;
+    margin-right: -30%;
+  }
+  .aside-avatar {
+    font-size: 10px;
+  }
+  .aside-show-wrapper {
+    margin-top: 1.5em;
+    font-size: 12px;
+  }
+  .aside-avatar-caption {
+    padding-top: 0;
+    margin: .3em;
+  }
+  .aside-show-description {
+    margin: .3em;
+  }
+}

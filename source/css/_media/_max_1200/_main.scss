@@ -1,0 +1,25 @@
+.main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 60%;
+  padding-bottom: 7em;
+  background-color: #fff;
+
+  .post {
+    font-size: 14px;
+  }
+  .min-height {
+    min-height: 0;
+    font-size: 14px;
+  }
+
+  .toc-wrapper {
+    display: none;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+}

@@ -1,7 +1,7 @@
 /* ========= 侧边栏 ========= */
 .aside {
   @extend .position-relative;
-  @extend .z-index_1;
+  z-index: 9999;
   @extend .float-left;
   width: 30%;
   @extend .height_100pct;

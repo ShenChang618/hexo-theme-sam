@@ -52,8 +52,14 @@ li p {
 }
 .video,
 video {
+  @extend .z-index_1;
   @extend .display-block;
+  max-width: 100%;
   @extend .margin-auto;
+}
+.youku {
+  width: 500px;
+  height: 500px;
 }
 .headerlink::before {
   content: "\e62f";
@@ -61,10 +67,10 @@ video {
   margin-right: .2em;
   font-family: "iconfont";
 }
-
 .highlight {
+  @extend .display-block;
   max-height: 600px;
-  margin-left: 2em;
+  margin: auto;
   overflow: auto;
 
   @import "./_highlight";

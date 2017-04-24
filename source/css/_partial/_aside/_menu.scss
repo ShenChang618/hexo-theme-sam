@@ -17,6 +17,7 @@
   @extend .list-style-none;
 }
 .aside-item {
+  @extend .position-relative;
   padding: .8em;
   @extend .cursor-pointer;
 }
@@ -25,6 +26,8 @@
   color: #fff;
 }
 .aside-menu-link {
+  @extend .position-relative;
+  z-index: 2;
   @extend .display-inlineBlock;
   @extend .width_0;
   @extend .height_0;
@@ -35,6 +38,14 @@
   @extend .color-fff;
   @extend .opacity_0;
   transition: all ease .5s;
+}
+.aside-item::after {
+  @extend .content-none;
+  @extend .position-absolute;
+  @extend .top_0;
+  @extend .left_0;
+  @extend .width_100pct;
+  @extend .height_100pct;
 }
 
 .aside-item:hover,

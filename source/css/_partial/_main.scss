@@ -4,6 +4,7 @@
   width: 70%;
   @extend .height_100pct;
   @extend .overflow-auto;
+  box-sizing: border-box;
 
   @import "./_main/_paginator";
   @import "./_main/_to-top";

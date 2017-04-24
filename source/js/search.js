@@ -135,7 +135,7 @@ window.onload = function () {
   }
 
   function search( key ) {
-    if ( trim( key ) ) {
+    if ( key = trim( key ) ) {
       var result = [],
           regExp = new RegExp( "(" + key.replace( /\s/g, "|" ) + ")", "gmi" );
 

@@ -1,3 +1,15 @@
 @mixin bg-rgba_000( $opacity: .6 ) {
   background-color: rgba(0,0,0,$opacity);
 }
+
+@mixin min-screen( $width ) {
+   @media screen and ( min-width: $width ) {
+     @content;
+   }
+}
+
+@mixin max-screen( $width ) {
+   @media screen and ( max-width: $width ) {
+     @content;
+   }
+}

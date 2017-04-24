@@ -1,9 +1,24 @@
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title><%= config.title %></title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta name="keywords" content="晨风明悟,个人博客,静态网站,前端,教程,Hexo,HTML,CSS,JavaScript,SCSS,Vue">
+  <meta name="description" content="晨风明悟的个人博客是使用Hexo静态博客框架搭建的网站，文章涉及前端开发，资源共享，业内资讯等内容">
+  <meta name="author" content="晨风明悟">
 
+  <% if ( page.title ) { %>
+  <title><%= page.title %></title>
+  <% } else { %>
+  <title>晨风明悟的个人博客</title>
+  <% } %>
+
+  <link rel="alternate" href="/atom.xml" title="晨风明悟" type="application/atom+xml">
+  <link rel="canonical" href="<%= url %>">
   <%- favicon_tag( config.favicon ) %>
   <%- css( "/css/style.css" ) %>
   <link rel="stylesheet" href="//at.alicdn.com/t/font_pb2xepysv85gsyvi.css">

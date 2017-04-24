@@ -116,6 +116,7 @@
 .post-copyright {
   padding: 1em;
   margin-top: 2em;
+  @extend .overflow-hidden;
   font-size: .9em;
   @extend .text-indent-abbr;
   @extend .color-000;
@@ -132,6 +133,7 @@
 }
 .toc-wrapper {
   @extend .position-fixed;
+  z-index: 9998;
   @extend .top_0;
   @extend .left_0;
   @extend .display-table;
