@@ -1,13 +1,7 @@
----
-title: hexo-theme-sam 主题使用方法
-date: 2017-04-24 16:14:29
-categories:
-  - 技术开发
-tags:
-  - hexo
----
+# hexo-theme-sam 主题使用方法
 
 ## 开始使用
+
 ### 安装主题
 1. 初始化
 ```bash
