@@ -14,8 +14,11 @@
 @import "./_common/_function";
 @import "./_common/_attribute";
 
-/*  ========= 基础 ========= */
+/* ========= 基础 ========= */
 @import "./_base";
+
+/* ========= 自定义 ========= */
+@import "./_custom";
 
 /* ========= 组件 ========= */
 /* 侧边栏 */
@@ -40,8 +43,11 @@
 @import "./_partial/_footer";
 
 /* ========= 媒体查询 ========= */
+@include min-screen( 740px ) {
+  @import "./_media/_min_740/_base";
+}
 @include max-screen( 1200px ) {
-  @import "./_media/_base";
+  @import "./_media/_max_1200/_base";
   @import "./_media/_max_1200/_aside";
   @import "./_media/_max_1200/_main";
 };

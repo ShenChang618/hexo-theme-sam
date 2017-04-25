@@ -39,7 +39,7 @@
   @extend .font-weight-normal;
   @extend .text-decoration-none;
   @extend .letter-spacing_1px;
-  @extend .color-333;
+  color: $title-color;
   transition: all ease .2s;
 }
 .post-title-link {
@@ -54,8 +54,8 @@
 }
 .post-title-link:hover {
   text-indent: .2em;
-  @extend .color-19f;
-  border-left: 4px solid $color-19f;
+  color: $title-color-hover;
+  border-left: 4px solid $title-color-hover;
 }
 .post-excerpt {
   margin: -.5em 0;
@@ -63,16 +63,17 @@
 }
 .post-more {
   @extend .display-inlineBlock;
-  @extend .text-indent-abbr;
+  margin-top: .5em;
+  text-indent: 1em;
   @extend .text-decoration-none;
-  @extend .color-19f;
+  color: $link-color;
   transition: all ease .2s;
 }
 .post-more:hover {
   @extend .text-decoration-underline;
-  text-indent: 2.5em;
-  @extend .color-333;
-  border-left: 2px solid $color-333;
+  text-indent: 2em;
+  color: $link-color-hover;
+  border-left: 2px solid $link-color-hover;
 }
 .post-meta {
   line-height: 1.8;
@@ -86,8 +87,8 @@
   padding: 0 .5em;
   margin-right: .6em;
   @extend .text-decoration-none;
-  @extend .color-fff;
-  @extend .background-color-19f;
+  color: $category-color;
+  background-color: $category-background-color;
   transition: all ease .2s;
 }
 .post-categories:hover {
@@ -96,11 +97,11 @@
 .post-tags {
   margin-right: .5em;
   @extend .text-decoration-none;
-  @extend .color-333;
+  color: $tag-color;
 }
 .post-tags:hover,
 .post-tags:hover .post-tags-icon::after {
-  @extend .color-19f;
+  color: $tag-color-hover;
 }
 .post-tags-icon {
   font-size: 1.1em;
@@ -168,7 +169,7 @@
   @extend .vertical-align-middle;
   width: 100%;
   padding: 0 1em;
-  @extend .overflow-auto;
+  @extend .overflow-hidden;
   @extend .list-style-none;
 }
 .toc-child {
@@ -178,14 +179,14 @@
 .toc-link {
   @extend .display-inlineBlock;
   margin: .1em 0;
-  text-indent: .4em;
+  padding-left: .4em;
   @extend .text-decoration-none;
   @extend .color-fff;
   border-left: 2px solid $color-fff;
   transition: all ease .2s;
 }
 .toc-link:hover {
-  text-indent: 1em;
+  padding-left: 1em;
   @extend .text-decoration-underline;
 }
 

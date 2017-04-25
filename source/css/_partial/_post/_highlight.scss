@@ -1,12 +1,12 @@
 /* ========= 代码块 ========= */
 table {
   width: 100%;
-  @extend .background-color-19f;
+  background-color: $highlight-title-background-color;
   border-collapse: collapse;
   @extend .border-radius_3px;
 }
 tbody {
-  background-color: #f8f5ec;
+  background-color: $highlight-body-background-color;
 }
 td {
   @extend .padding_0;
@@ -26,35 +26,37 @@ pre {
 .gutter {
   width: 1.5em;
   text-align: center;
-  color: #999;
-  border-right: 2px solid $color-fff;
+  color: $highlight-number-color;
+  border-right: 2px solid $highlight-number-border-color;
 }
 .code {
   text-indent: 1em;
 }
 
-.attr,
+.attr {
+  color: $highlight-pre-color-attr;
+}
 .selector-tag {
-  color: #f4a460;
+  color: $highlight-pre-color-selector-tag;
 }
 .keyword {
-  color: #19f;
+  color: $highlight-pre-color-keyword;
 }
 .name {
-  color: #ff4500;
+  color: $highlight-pre-color-name;
 }
 .string {
-  color: #32cd32;
+  color: $highlight-pre-color-string;
 }
 .literal {
-  color: #333;
+  color: $highlight-pre-color-literal;
 }
 
 table::before {
   display: block;
   padding: .3em;
-  @extend .color-fff;
-  @extend .background-color-19f;
+  color: $highlight-title-color;
+  background-color: $highlight-title-background-color;
   border-radius: 3px 3px 0 0;
 }
 &.plain table::before {

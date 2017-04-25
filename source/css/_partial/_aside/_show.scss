@@ -8,7 +8,7 @@
   left: 2.8em;
   @extend .overflow-hidden;
   @extend .text-align-center;
-  @extend .color-fff;
+  color: $aside-text-color;
   background-color: rgba(0,0,0,.1);
   transition: all ease .5s;
 }
@@ -33,7 +33,7 @@
   width: .8em;
   height: .8em;
   margin-left: -.4em;
-  @extend .background-color-fff;
+  background-color: $aside-split-color;
   @extend .border-radius-round;
 }
 .aside-avatar-img {
@@ -41,7 +41,7 @@
   width: 6.3em;
   height: 6.3em;
   margin: 20px auto;
-  @extend .background-color-ccc;
+  background-color: $aside-avatar-color;
   border-radius: $_50pct;
 }
 .aside-avatar-caption {
@@ -57,7 +57,7 @@
   @extend .top_0;
   @extend .display-block;
   width: 40%;
-  border-top: 2px solid $color-fff;
+  border-top: 2px solid $aside-split-color;
 }
 .aside-avatar-caption::after {
   right: 0;
@@ -84,7 +84,7 @@
   @extend .float-left;
   padding: .2em .3em;
   margin: 0 .2em;
-  background-color: rgba(0,0,0,.7);
+  background-color: $aside-item-background-color;
   @extend .border-radius-round;
 }
 .aside-show-link {
@@ -93,13 +93,13 @@
 }
 .aside-show-icon {
   font-size: 1.5em;
-  @extend .color-fff;
+  color: $aside-item-text-color;
 }
 .aside-show-item:hover {
-  background-color: rgba(255,255,255,.7);
+  background-color: $aside-item-background-color-hover;
 }
 .aside-show-item:hover .aside-show-icon {
-  @extend .color-333;
+  color: $aside-item-text-color-hover;
 }
 .aside-show-outside {
   @extend .position-absolute;
@@ -108,7 +108,7 @@
   width: 120px;
   padding: .5em;
   margin-left: -60px;
-  @extend .background-color-fff;
+  background-color: $aside-item-text-color;
   @extend .border-radius_6px;
   box-shadow: 1px 1px 2px 3px rgba(0,0,0,.3);
   transition: all ease .5s;
@@ -129,7 +129,7 @@
   left: 56px;
   border-width: 1em;
   border-style: solid;
-  border-color: $color-fff transparent transparent transparent;
+  border-color: $aside-item-text-color transparent transparent transparent;
 }
 .aside-show-outside_1::after {
   left: 46px;

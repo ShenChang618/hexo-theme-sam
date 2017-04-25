@@ -1,7 +1,7 @@
 /**
  * 搜索功能
  **/
-window.onload = function () {
+( function () {
   var dom = {
     searchText: document.getElementById( "search-text" ),
     searchBtn: document.getElementById("search-btn"),
@@ -18,10 +18,7 @@ window.onload = function () {
 
   // 搜索
   dom.searchBtn.onclick = function () {
-    if ( trim( dom.searchText.value ) ) {
-      dom.searchData.style.display = "block";
-      search( dom.searchText.value );
-    }
+    search( dom.searchText.value );
   };
 
   // 关闭
@@ -144,10 +141,12 @@ window.onload = function () {
           return match( post, regExp );
         } );
 
-        result = replace( result, regExp );
-
-        render( dom.searchWrapper, result );
+        if ( result.length ) {
+          result = replace( result, regExp );
+          render( dom.searchWrapper, result );
+          dom.searchData.style.display = "block";
+        }
       } );
     }
   }
-};
+} )();

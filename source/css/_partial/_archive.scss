@@ -7,20 +7,23 @@
 .archive-title-counter {
   margin: 0 .5em 0 .1em;
   font-size: .9em;
-  @extend .color-19f;
+  color: $link-color;
 }
 .archive-post {
-  @extend .text-indent-abbr;
+  text-indent: 1em;
   transition: all ease .1s;
 }
 .archive-post:hover {
-  border-left: 2px solid #333;
+  border-left: 2px solid $link-color-hover;
 }
 .archive-link {
   @extend .text-decoration-none;
-  @extend .color-19f;
+  color: $link-color;
 }
 .archive-link:hover {
   @extend .text-decoration-underline;
-  @extend .color-333;
+  color: $link-color-hover;
+}
+.archive-time {
+  margin-right: .4em;
 }

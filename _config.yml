@@ -37,5 +37,9 @@ links:
     description: 能够一边直播一边踩能够一边直播一边踩
 
 # 畅言
+comments: true
 changyan_appid: cysXoaLrO
 changyan_appkey: d728bfac2289e4139bef3956efe4401f
+
+# 搜索
+search: true

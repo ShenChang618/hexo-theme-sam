@@ -1,0 +1,56 @@
+/* 导航 */
+$menu-color: $color_fff;
+$menu-color-hover: $color_333;
+$menu-background-color: $color_fff;
+$menu-border-color: $color-ccc;
+
+/* 搜索框 */
+$search-text-color: $color_fff;
+$search-btn-color: $color_fff;
+$search-btn-color-hover: $color_19f;
+$search-shadow-color: rgba(255,255,255,.2);
+$search-shadow-color-hover: $color-19f;
+
+/* 侧边展示 */
+$aside-text-color: $color_fff;
+$aside-avatar-color: $color-ccc;
+$aside-split-color: $color_fff;
+$aside-item-text-color: $color_fff;
+$aside-item-background-color: rgba(0,0,0,.7);
+$aside-item-text-color-hover: $color_333;
+$aside-item-background-color-hover: rgba(255,255,255,.7);
+
+/* 背景 */
+$custom-background-image: "/img/aside-show.jpg";
+$custom-media-background-image: "/img/aside-show-media.jpg";
+
+/* 链接颜色 */
+$link-color: $color_19f;
+$link-color-hover: $color-333;
+
+/* 分类颜色 */
+$category-background-color: $color_19f;
+$category-color: $color_fff;
+
+/* 标签颜色 */
+$tag-color: $color_333;
+$tag-color-hover: $color-19f;
+
+/* 标题颜色 */
+$title-color: $color_333;
+$title-color-hover: $color-19f;
+
+/* 代码块高亮 */
+$highlight-title-color: $color_fff;
+$highlight-title-background-color: $color_19f;
+$highlight-body-color: $color_333;
+$highlight-body-background-color: #f8f5ec;
+$highlight-number-color: #999;
+$highlight-number-border-color: $color_fff;
+
+$highlight-pre-color-attr: #f4a460;
+$highlight-pre-color-selector-tag: #f4a460;
+$highlight-pre-color-keyword: #19f;
+$highlight-pre-color-name: #ff4500;
+$highlight-pre-color-string: #32cd32;
+$highlight-pre-color-literal: #333;

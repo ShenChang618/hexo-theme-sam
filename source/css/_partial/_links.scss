@@ -17,7 +17,7 @@
   width: 80px;
   height: 80px;
   @extend .border-radius-round;
-  box-shadow: 1px 1px 1px 1px $color-19f;
+  box-shadow: 1px 1px 1px 1px $link-color;
 }
 .links-wrapper {
   @extend .float-left;
@@ -26,7 +26,7 @@
 }
 .links-link:hover {
   @extend .color-333;
-  border-bottom: 1px solid $color-333;
+  border-bottom: 1px solid $link-color-hover;
 }
 .links-text {
   @extend .margin_0;
@@ -46,6 +46,6 @@
   @extend .display-block;
   height: 29px;
   @extend .text-decoration-none;
-  @extend .color-19f;
-  border-bottom: 1px solid $color-19f;
+  color:  $link-color;
+  border-bottom: 1px solid $link-color;
 }

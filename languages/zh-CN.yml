@@ -16,6 +16,7 @@ paginator:
 title:
   tags: 所有标签
   categories: 所有分类
+  about: 关于
   links: 友情链接
   # posts in total, "en" or "zh"
   posts_in_total: zh

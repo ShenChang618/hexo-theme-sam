@@ -21,9 +21,10 @@
   </ul>
   <% } else { %>
   <header class="post-header">
+    <% if ( url_for( page.path ) === "/about/index.html" ) { %>
+    <h1 class="post-title"><%- __( "title.about" ) %></h1>
+    <% } else { %>
     <h1 class="post-title"><%= page.title %></h1>
-
-    <% if ( url_for( page.path ) !== "/about/index.html" ) { %>
     <p class="post-meta">
       <span class="post-time"><%- date(page.date, 'YYYY-MM-DD') %></span>
       <% page.categories.data.forEach( function ( categorie ) { %>
@@ -38,7 +39,9 @@
   <div class="post-content"><%- page.content %></div>
     <% if ( url_for( page.path ) !== "/about/index.html" ) { %>
       <%- partial( "./_partial/_copyright.ejs" ) %>
-      <%- partial( "./_partial/_comments.ejs" ) %>
+      <% if ( theme.comments ) { %>
+        <%- partial( "./_partial/_comments.ejs" ) %>
+      <% } %>
       <div class="toc-wrapper">
         <%- toc( page.content, { list_number: false } ) %>
       </div>

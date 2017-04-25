@@ -1,21 +1,20 @@
 /* ========= markdown 语法 ========= */
 p {
-  @extend .text-indent-abbr;
+  text-indent: 1em;
   line-height: 1.6;
 }
 a {
-  @extend .color-19f;
+  color: $link-color;
   @extend .text-decoration-none;
 }
 a:hover {
-  @extend .color-333;
+  color: $link-color-hover;
   @extend .text-decoration-underline;
 }
 img {
   @extend .display-block;
   max-width: 90%;
-  @extend .margin-auto;
-  margin-top: 1em;
+  margin: 1em auto;
   box-shadow: 1px 1px 1px #ccc;
 }
 h2,
@@ -46,7 +45,7 @@ code {
 }
 ul,
 ol {
-  padding-left: 2em;
+  padding-left: 1em;
 }
 li {
   line-height: 1.5;
@@ -54,6 +53,28 @@ li {
 li p {
   @extend .text-indent-none;
 }
+& > .highlight {
+  margin-left: 0 !important;
+}
+
+table {
+  max-width: 100%;
+  margin: 1em 0;
+  border-collapse: collapse;
+}
+thead {
+  @extend .color-fff;
+  @extend .background-color-19f;
+}
+th,
+td {
+  font-size: 1em;
+  padding: .5em 1em;
+}
+tbody {
+  background-color: #f8f5ec;
+}
+
 .video,
 video {
   @extend .z-index_1;
@@ -74,8 +95,11 @@ video {
 .highlight {
   @extend .display-block;
   max-height: 600px;
-  margin: auto;
+  margin: 1em 0 1em -1em;
   overflow: auto;
 
   @import "./_highlight";
+}
+.highlight table {
+  margin: 0;
 }

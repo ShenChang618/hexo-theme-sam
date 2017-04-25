@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   height: 40%;
-  background: url("/img/aside-show_media.jpg") no-repeat right center / cover;
+  background: url( $custom-media-background-image ) no-repeat right center / cover;
 
   .aside-show {
     z-index: 1;

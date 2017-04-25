@@ -35,7 +35,7 @@
   text-indent: 1em;
   @extend .text-decoration-none;
   @extend .white-space-nowrap;
-  @extend .color-fff;
+  color: $menu-color;
   @extend .opacity_0;
   transition: all ease .5s;
 }
@@ -50,14 +50,14 @@
 
 .aside-item:hover,
 .aside-menu-current {
-  @extend .background-color-fff;
+  background-color: $menu-background-color;
   transition: all ease .5s;
 }
 .aside-item:hover .aside-menu-icon,
 .aside-item:hover .aside-menu-link,
 .aside-menu-current .aside-menu-icon,
 .aside-menu-current .aside-menu-link {
-  color: #333;
+  color: $menu-color-hover;
 }
 .aside-item:hover .aside-menu-link,
 .aside-menu-current .aside-menu-link {
@@ -70,7 +70,7 @@
 }
 .aside-item:hover,
 .aside-menu:hover .aside-menu-current {
-  border-left: 4px solid $color-ccc;
+  border-left: 4px solid $menu-border-color;
 }
 .aside-menu:hover .aside-menu-link {
   width: 20em;

@@ -11,8 +11,8 @@
   @extend .vertical-align-top;
   margin: 1em .2em;
   @extend .font-size_18px;
-  @extend .background-color-19f;
-  border: 2px solid $color-19f;
+  background-color: $category-background-color;
+  border: 2px solid $category-background-color;
   transition: all ease .2s;
 }
 .category-list-item:hover {
@@ -30,7 +30,7 @@
   padding: 0 .5em;
   @extend .text-decoration-none;
   line-height: 1.8;
-  @extend .color-fff;
+  color: $category-color;
 }
 .category-list-count {
   @extend .height_0;
@@ -58,11 +58,11 @@
   margin: 0 .2em;
   @extend .text-decoration-none;
   line-height: 30px;
-  @extend .color-19f;
+  color: $tag-color;
   transition: all ease .2s;
 }
 .tag-cloud a:hover {
   @extend .text-decoration-underline;
-  @extend .color-333;
+  color: $tag-color-hover;
   transform: scale(1.2);
 }

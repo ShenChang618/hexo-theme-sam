@@ -1,4 +1,4 @@
-window.onload = function () {
+( function () {
   var div = null,
       a = null,
       doc = {
@@ -15,4 +15,4 @@ window.onload = function () {
     doc.main.innerHTML += a;
     document.getElementById( "toTop" ).style.display = "block";
   }
-};
+} )();

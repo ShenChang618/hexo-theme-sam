@@ -12,8 +12,10 @@
   </nav>
 
   <article class="aside-show">
-    <%- partial( "./_search.ejs" ) %>
-    <%- partial( "./_search-data.ejs" ) %>
+    <% if ( theme.search ) { %>
+      <%- partial( "./_search.ejs" ) %>
+      <%- partial( "./_search-data.ejs" ) %>
+    <% } %>
     <div class="aside-show-wrapper">
       <figure class="aside-avatar">
         <img src="<%= theme.aside_show.avatar %>" alt="avatar" class="aside-avatar-img">

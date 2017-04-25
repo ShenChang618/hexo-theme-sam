@@ -16,6 +16,7 @@ paginator:
 title:
   tags: All tags
   categories: All categories
+  about: About
   links: Blogroll
   # posts in total, "en" or "zh"
   posts_in_total: en
