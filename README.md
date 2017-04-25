@@ -40,7 +40,7 @@ $ hexo init blog
   ```yml
   theme: hexo-theme-sam
   ```
-  ![图片](http://www.cfmwsc.com/2017/04/24/hexo-theme-sam-used/post_1.png)
+  ![图片](http://www.cfmwsc.cn/2017/04/24/hexo-theme-sam-used/post_1.png)
 
 4. 主题预览
   * 预览当前主题；
@@ -49,7 +49,7 @@ $ hexo init blog
     ```
 
   * 发现没有加载`css`文件，因为默认`hexo`使用了`stylus`预处理器；而`hexo-theme-sam`主题使用了`SCSS`预处理器，先不管它往后看。  
-  ![图片](http://www.cfmwsc.com/2017/04/24/hexo-theme-sam-used/post_2.png)
+  ![图片](http://www.cfmwsc.cn/2017/04/24/hexo-theme-sam-used/post_2.png)
 
 ### 插件准备
 1. 安装
@@ -129,8 +129,8 @@ $ hexo new post hexo-test
 
 ### 文章摘要
 在文章内容中添加`<!-- more -->`就可以在主页显示摘要，如下所示：
-![图片](http://www.cfmwsc.com/2017/04/24/hexo-theme-sam-used/post_3.png)
-![图片](http://www.cfmwsc.com/2017/04/24/hexo-theme-sam-used/post_4.png)
+![图片](http://www.cfmwsc.cn/2017/04/24/hexo-theme-sam-used/post_3.png)
+![图片](http://www.cfmwsc.cn/2017/04/24/hexo-theme-sam-used/post_4.png)
 
 ### 评论设置
 * 评论默认开启，在主题的配置文件`_config.yml`中：
@@ -182,7 +182,7 @@ $ hexo new page tags
 tags: 所有标签
 categories: 所有分类
 ```
-![图片](http://www.cfmwsc.com/2017/04/24/hexo-theme-sam-used/post_5.png)
+![图片](http://www.cfmwsc.cn/2017/04/24/hexo-theme-sam-used/post_5.png)
 
 * 如果`分类`和`标签`是中文，就需要映射为英文以便链接和文件夹名为英文，在根配置文件中修改：
 ```yml
