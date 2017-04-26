@@ -1,0 +1,5 @@
+<% if ( url_for( page.path ) !== "/about/index.html" && url_for( page.path ) !== "/tags/index.html" && url_for( page.path ) !== "/links/index.html" ) { %>
+  <div class="toc-wrapper">
+    <%- toc( page.content, { list_number: false } ) %>
+  </div>
+<% } %>

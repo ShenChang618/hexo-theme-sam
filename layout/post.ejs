@@ -43,7 +43,11 @@
         <%- partial( "./_partial/_comments.ejs" ) %>
       <% } %>
       <div class="toc-wrapper">
-        <%- toc( page.content, { list_number: false } ) %>
+        <div class="toc-scroll">
+          <div class="toc-middle">
+            <%- toc( page.content, { list_number: false } ) %>
+          </div>
+        </div>
       </div>
     <% } %>
   <% } %>

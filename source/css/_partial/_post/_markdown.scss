@@ -39,8 +39,8 @@ code {
   margin: 0 .3em;
   @extend .text-indent-none;
   line-height: 1.4;
-  @extend .color-fff;
-  @extend .background-color-19f;
+  color: $code-color;
+  background-color: $code-background-color;
   @extend .border-radius_3px;
 }
 ul,

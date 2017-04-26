@@ -21,8 +21,8 @@ $aside-item-text-color-hover: $color_333;
 $aside-item-background-color-hover: rgba(255,255,255,.7);
 
 /* 背景 */
-$custom-background-image: "/img/aside-show.jpg";
-$custom-media-background-image: "/img/aside-show-media.jpg";
+$custom-background-image: "/img/background/background.jpg";
+$custom-media-background-image: "/img/background/background-media.jpg";
 
 /* 链接颜色 */
 $link-color: $color_19f;
@@ -40,17 +40,29 @@ $tag-color-hover: $color-19f;
 $title-color: $color_333;
 $title-color-hover: $color-19f;
 
+/* 代码颜色 */
+$code-color: $color_fff;
+$code-background-color: $color_19f;
+
 /* 代码块高亮 */
 $highlight-title-color: $color_fff;
 $highlight-title-background-color: $color_19f;
-$highlight-body-color: $color_333;
-$highlight-body-background-color: #f8f5ec;
+$highlight-body-color: #abb2bf;
+$highlight-body-background-color: #282C34;
 $highlight-number-color: #999;
 $highlight-number-border-color: $color_fff;
 
-$highlight-pre-color-attr: #f4a460;
-$highlight-pre-color-selector-tag: #f4a460;
+$highlight-pre-color-attr: #e06c75;
+$highlight-pre-color-selector-tag: #d19a66;
+$highlight-pre-color-attribute: #e06c75;
 $highlight-pre-color-keyword: #19f;
 $highlight-pre-color-name: #ff4500;
-$highlight-pre-color-string: #32cd32;
-$highlight-pre-color-literal: #333;
+$highlight-pre-color-string: #8fb774;
+$highlight-pre-color-literal: #d19a66;
+$highlight-pre-color-meta: #8fb774;
+$highlight-pre-color-built_in: #53b0bd;
+$highlight-pre-color-function: #c678dd;
+$highlight-pre-color-comment: #5c6370;
+$highlight-pre-color-number: #8fb774;
+$highlight-pre-color-bullet: #8fb774;
+$highlight-pre-color-variable: #e06c75;

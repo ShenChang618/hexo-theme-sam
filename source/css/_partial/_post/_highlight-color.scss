@@ -1,0 +1,42 @@
+.attr {
+  color: $highlight-pre-color-attr;
+}
+.attribute {
+  color: $highlight-pre-color-attribute;
+}
+.selector-tag {
+  color: $highlight-pre-color-selector-tag;
+}
+.keyword {
+  color: $highlight-pre-color-keyword;
+}
+.name {
+  color: $highlight-pre-color-name;
+}
+.string {
+  color: $highlight-pre-color-string;
+}
+.literal {
+  color: $highlight-pre-color-literal;
+}
+.meta {
+  color: $highlight-pre-color-meta;
+}
+.built_in {
+  color: $highlight-pre-color-built_in;
+}
+.function > .keyword {
+  color: $highlight-pre-color-function;
+}
+.comment {
+  color: $highlight-pre-color-comment;
+}
+.number {
+  color: $highlight-pre-color-number;
+}
+.bullet {
+  color: $highlight-pre-color-bullet;
+}
+.variable {
+  color: $highlight-pre-color-variable;
+}

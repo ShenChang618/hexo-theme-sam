@@ -1,0 +1,27 @@
+&.plain table::before {
+  content: "CODE";
+}
+&.bash table::before {
+  content: "BASH";
+}
+&.html table::before {
+  content: "HTML";
+}
+&.scss table::before {
+  content: "SCSS";
+}
+&.javascript table::before {
+  content: "JavaScript";
+}
+&.python table::before {
+  content: "PYTHON";
+}
+&.yml table::before {
+  content: "YML";
+}
+&.yaml table::before {
+  content: "YAML";
+}
+&.markdown table::before {
+  content: "MarkDown";
+}
