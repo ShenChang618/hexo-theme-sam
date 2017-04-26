@@ -230,3 +230,115 @@ fontface_url: //at.alicdn.com/t/font_pb2xepysv85gsyvi.css
 ```
 
 * 修改导航菜单图标[上文](导航菜单)有讲，但是还有一些图标就要在`SCSS`文件中找了。
+
+### 文章置顶
+* 相关插件是`hexo-generator-index`，在文章的[Front-matter](https://hexo.io/zh-cn/docs/front-matter.html)设置：
+```yaml
+---
+top: true
+---  
+```
+
+* 这样的置顶是在它所在的那一页的效果，我们需要修改下插件的代码；在`node_modules`文件夹中找到`hexo-generator-index`文件夹，在`lib`文件夹中打开`generator.js`，修改如下：
+```javascript
+'use strict';
+var pagination = require('hexo-pagination');
+module.exports = function(locals){
+  var config = this.config;
+  var posts = locals.posts;
+    posts.data = posts.data.sort(function(a, b) {
+        if(a.top && b.top) {
+            if(a.top == b.top) return b.date - a.date;
+            else return b.top - a.top;
+        }
+        else if(a.top && !b.top) {
+            return -1;
+        }
+        else if(!a.top && b.top) {
+            return 1;
+        }
+        else return b.date - a.date;
+    });
+  var paginationDir = config.pagination_dir || 'page';
+  return pagination('', posts, {
+    perPage: config.index_generator.per_page,
+    layout: ['index', 'archive'],
+    format: paginationDir + '/%d/',
+    data: {
+      __index: true
+    }
+  });
+};
+```
+
+## 自定义
+前面其实说了一些自定义的内容，现在来设置样式，图片等。
+
+### 个人头像
+* 头像默认存储在`hexo-theme-sam/source/img/avatar.png`。
+* 主题配置文件`hexo-theme-sam/_config.yml`配置头像地址，并且头像信息也在这里更改：
+```yml
+aside_show:
+  avatar: /img/avatar.png
+  name: 晨风明悟
+  caption: 个人博客
+  description: 观诸次为道，存神于想思。
+```
+
+### 背景图片
+* 背景默认存储在`hexo-theme-sam/source/img/background/`中，有两个图像文件`background.jpg`为大图和`background-media.jpg`为小图。
+
+* 也可以在`hexo-theme-sam/source/css/_custom.scss`中修改图片位置：
+```scss
+/* 背景 */
+$custom-background-image: "/img/background/background.jpg";
+$custom-media-background-image: "/img/background/background-media.jpg";
+```
+
+### 代码高亮
+* 在`hexo-theme-sam/source/css/_custom.scss`中设置代码高亮外框样式：
+```scss
+/* 代码块高亮 */
+$highlight-title-color: $color_fff;
+$highlight-title-background-color: $color_19f;
+$highlight-body-color: #abb2bf;
+$highlight-body-background-color: #282C34;
+$highlight-number-color: #999;
+$highlight-number-border-color: $color_fff;
+```
+
+* 在`hexo-theme-sam/source/css/_custom.scss`中设置代码高亮风格：
+```scss
+$highlight-pre-color-attr: #e06c75;
+$highlight-pre-color-selector-tag: #d19a66;
+$highlight-pre-color-attribute: #e06c75;
+$highlight-pre-color-keyword: #19f;
+$highlight-pre-color-name: #ff4500;
+$highlight-pre-color-string: #8fb774;
+$highlight-pre-color-literal: #d19a66;
+$highlight-pre-color-meta: #8fb774;
+$highlight-pre-color-built_in: #53b0bd;
+$highlight-pre-color-function: #c678dd;
+$highlight-pre-color-comment: #5c6370;
+$highlight-pre-color-number: #8fb774;
+$highlight-pre-color-bullet: #8fb774;
+$highlight-pre-color-variable: #e06c75;
+```
+
+### 文本高亮
+在`hexo-theme-sam/source/css/_custom.scss`中可以设置代码高亮风格：
+```scss
+/* 代码颜色 */
+$code-color: $color_fff;
+$code-background-color: $color_19f;
+```
+
+### 其它自定义
+基本所有颜色都可以在`hexo-theme-sam/source/css/_custom.scss`中设置。
+* 导航
+* 搜索框
+* 侧边展示
+* 链接颜色
+* 分类颜色
+* 标签颜色
+* 标题颜色
