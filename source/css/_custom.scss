@@ -32,6 +32,13 @@ $link-color-hover: $color-333;
 $category-background-color: $color_19f;
 $category-color: $color_fff;
 
+/* 引用 */
+$blockquote-color: #abb2bf;
+$blockquote-background-color: #282C34;
+$blockquote-border-color: $color-19f;
+// $blockquote-background-color-hover: ;
+
+
 /* 标签颜色 */
 $tag-color: $color_333;
 $tag-color-hover: $color-19f;
@@ -54,6 +61,8 @@ $highlight-number-border-color: $color_fff;
 
 $highlight-pre-color-attr: #e06c75;
 $highlight-pre-color-selector-tag: #d19a66;
+$highlight-pre-color-selector-class: #e06c75;
+$highlight-pre-color-selector-id: #19f;
 $highlight-pre-color-attribute: #e06c75;
 $highlight-pre-color-keyword: #19f;
 $highlight-pre-color-name: #ff4500;

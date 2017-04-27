@@ -57,6 +57,18 @@ li p {
   margin-left: 0 !important;
 }
 
+blockquote {
+  margin-left: 0;
+  margin-right: 0;
+  color: $blockquote-color;
+  background-color: $blockquote-background-color;
+  border-left: .25em solid $blockquote-border-color;
+}
+blockquote > p {
+  padding: 1em;
+  @extend .margin_0;
+}
+
 table {
   max-width: 100%;
   margin: 1em 0;
