@@ -19,7 +19,7 @@
 .archive-title,
 .post-header .post-title,
 .post-tags-title {
-  text-indent: .2em;
+  padding-left: .5em;
   border-left: 4px solid $color-333;
 }
 .archive-title,
@@ -43,17 +43,17 @@
   transition: all ease .2s;
 }
 .post-title-link {
-  @extend .display-inlineBlock;
+  @extend .display-block;
 }
 .post-tags-title,
-.post-title,
+.post-title-link,
 .archive-title {
   @extend .overflow-hidden;
   @extend .white-space-nowrap;
   @extend .text-overflow-ellipsis;
 }
 .post-title-link:hover {
-  text-indent: .2em;
+  text-indent: .5em;
   color: $title-color-hover;
   border-left: 4px solid $title-color-hover;
 }

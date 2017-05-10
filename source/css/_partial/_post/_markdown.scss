@@ -1,6 +1,6 @@
 /* ========= markdown 语法 ========= */
 p {
-  text-indent: 1em;
+  @extend .text-indent-abbr;
   line-height: 1.6;
 }
 a {
@@ -45,7 +45,7 @@ code {
 }
 ul,
 ol {
-  padding-left: 1em;
+  padding-left: 1.5em;
 }
 li {
   line-height: 1.5;
