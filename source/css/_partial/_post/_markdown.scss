@@ -1,6 +1,10 @@
 /* ========= markdown 语法 ========= */
 p {
+  @extend .text-indent-abbr;
   line-height: 1.6;
+}
+blockquote p {
+  @extend .text-indent-none;
 }
 a {
   color: $link-color;
