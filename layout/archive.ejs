@@ -1,9 +1,5 @@
 <article class="archive min-height">
-  <% if ( __( "title.posts_in_total" ) === "zh" ) { %>
-  <h1 class="archive-title">本站目前共计<em class="archive-title-counter"><%= site.posts.length %></em>篇文章</h1>
-  <% } else { %>
-  <h1 class="archive-title"><em class="archive-title-counter"><%= site.posts.length %></em>Posts In Total</h1>
-  <% } %>
+  <h1 class="archive-title"><%= __( "title.archives" ) %><em class="archive-title-counter"><%= site.posts.length %></em></h1>
 
   <%
     /**

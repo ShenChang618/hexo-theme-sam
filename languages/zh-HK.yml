@@ -1,0 +1,21 @@
+# 侧边栏菜单
+aside_menu:
+  home: 首頁
+  archives: 所有文章
+  tags: 分類標籤
+  links: 友情連結
+  about: 關於
+  rss: RSS
+
+# 分页
+paginator:
+  prev: 上一頁
+  next: 下一頁
+
+# 页面标题
+title:
+  tags: 所有標籤
+  categories: 所有分類
+  about: 關於
+  links: 友情連結
+  posts_in_total: 現時共計文章

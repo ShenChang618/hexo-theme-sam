@@ -1,4 +1,3 @@
-# aside menu
 aside_menu:
   home: Home
   archives: Archives
@@ -18,5 +17,4 @@ title:
   categories: All categories
   about: About
   links: Blogroll
-  # posts in total, "en" or "zh"
-  posts_in_total: Posts In Total
+  archives: Posts In Total

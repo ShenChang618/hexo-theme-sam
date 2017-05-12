@@ -31,10 +31,15 @@ aside_show:
 
 # 友情链接
 links:
-  baidu:
-    avatar: /img/qq.png
-    link: http://www.baidu.com
-    description: 能够一边直播一边踩能够一边直播一边踩
+  '龙哥盟':
+    avatar: /img/links/links-flygon.jpg
+    link: http://flygon.net/
+    description: 东川路男子职业技术学院，软件工程专业毕业生。曾经的贴吧狗，淡出的微博控。~~ 混乱中立阵营。 ~~
+  '无念':
+    avatar: /img/links/links-munen.jpeg
+    link: https://munen.cc/
+    description: 自由撰稿人。籍贯广东清远，武汉大学大一在读。
+
 
 # 畅言
 comments: true

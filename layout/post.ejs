@@ -27,10 +27,10 @@
     <h1 class="post-title"><%= page.title %></h1>
     <p class="post-meta">
       <span class="post-time"><%- date(page.date, 'YYYY-MM-DD') %></span>
-      <% page.categories.data.forEach( function ( categorie ) { %>
+      <% page.categories && page.categories.data.forEach( function ( categorie ) { %>
       <a href="<%- url_for( categorie.path ) %>" title="<%= categorie.name %>" class="post-categories"><%= categorie.name %></a>
       <% } ) %>
-      <% page.tags.data.forEach( function ( tag ) { %>
+      <% page.tags && page.tags.data.forEach( function ( tag ) { %>
       <a href="<%- url_for( tag.path ) %>"" title="<%= tag.name %>" class="post-tags"><i class="post-tags-icon iconfont icon-biaoqian"></i><%= tag.name %></a>
       <% } ) %>
     </p>
