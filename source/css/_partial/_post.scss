@@ -64,14 +64,14 @@
 .post-more {
   @extend .display-inlineBlock;
   margin-top: .5em;
-  text-indent: 1em;
+  @extend .text-indent-abbr;
   @extend .text-decoration-none;
   color: $link-color;
   transition: all ease .2s;
 }
 .post-more:hover {
   @extend .text-decoration-underline;
-  text-indent: 2em;
+  text-indent: 2.5em;
   color: $link-color-hover;
   border-left: 2px solid $link-color-hover;
 }
