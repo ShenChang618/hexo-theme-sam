@@ -7,10 +7,10 @@
   @extend .list-style-none;
 }
 .links-item {
-  @extend .display-inlineBlock;
+  @extend .display-block;
   @extend .clearfix;
   width: 350px;
-  margin: 1em .5em;
+  margin: 1em auto;
 }
 .links-avatar {
   @extend .float-left;
