@@ -1,22 +1,37 @@
 /* ========= 分类标签 ========= */
 .category-list {
-  height: 5em;
   @extend .padding_0;
   @extend .margin_0;
+  margin-top: 1em;
   @extend .text-align-center;
   @extend .list-style-none;
 }
 .category-list-item {
+  position: relative;
   @extend .display-inlineBlock;
   @extend .vertical-align-top;
-  margin: 1em .2em;
+  height: 58px;
+  margin: .1em .2em;
   @extend .font-size_18px;
   background-color: $category-background-color;
   border: 2px solid $category-background-color;
   transition: all ease .2s;
 }
+.category-list-item::after {
+  content: '';
+  @extend .position-absolute;
+  bottom: -3px;
+  left: -3%;
+  @extend .display-block;
+  width: 106%;
+  height: 29px;
+  @extend .background-color-fff;
+}
 .category-list-item:hover {
   opacity: .9;
+}
+.category-list-item:hover::after {
+  opacity: 0;
 }
 .category-list-item:hover .category-list-count {
   height: 1.6em;
@@ -47,6 +62,13 @@
   @extend .display-inlineBlock;
   margin-left: .2em;
   font-size: .9em;
+}
+.category-list-child {
+  display: none;
+
+  .category-list-item {
+    margin: 0;
+  }
 }
 .tag-cloud {
   padding: 1em 17%;

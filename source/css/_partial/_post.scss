@@ -63,7 +63,7 @@
 }
 .post-more {
   @extend .display-inlineBlock;
-  margin-top: .5em;
+  margin-top: 1em;
   @extend .text-indent-abbr;
   @extend .text-decoration-none;
   color: $link-color;
