@@ -63,6 +63,7 @@ li p {
 blockquote {
   margin-left: 0;
   margin-right: 0;
+  overflow: hidden;
   color: $blockquote-color;
   background-color: $blockquote-background-color;
   border-left: .25em solid $blockquote-border-color;
