@@ -1,4 +1,5 @@
 # hexo-theme-sam 主题使用方法
+hexo-theme-sam 主题使用方法
 
 ## 开始使用
 
